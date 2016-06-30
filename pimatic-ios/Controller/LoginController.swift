@@ -46,7 +46,7 @@ class LoginController {
         }
     }
     
-    func connect() {
+    func connect(board : UIStoryboard?, navController :UINavigationController) {
         
         if (validData == true) {
             
@@ -55,30 +55,23 @@ class LoginController {
             let address : NSURL
             
             if ( login.ssl == true ) {
-                address = NSURL(fileURLWithPath: "https://" + login.hostname + ":" + login.port)
+                address = NSURL(string: "https://" + login.hostname + ":" + login.port)!
             } else {
-                address = NSURL(fileURLWithPath: "http://" + login.hostname + ":" + login.port)
+                address = NSURL(string: "http://" + login.hostname + ":" + login.port)!
             }
             
-            socket = SocketIOClient(socketURL: address, options: [ .Log(true), .Reconnects(true), .ReconnectWait(5), .SelfSigned(true), .ConnectParams(["username" : login.username, "password" : login.password]), .ForceNew(true)])
+            ConnectionController.sharedSession.connect(address, user: login.username, password: login.password)
             
-            socket.connect(timeoutAfter: 20, withTimeoutHandler: timeoutHandler)
-            
-            socket.on("connect") { ack in
-                print ("Hallo")
-                self.circle.hidden = true
+            ConnectionController.sharedSession.socket.on("connect") { ack in
+                if let mainController = board?.instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController {
+                    navController.presentViewController(mainController, animated: true, completion: nil)
+                }
             }
         }
         
         
     }
     
-    func timeoutHandler() -> Void {
-        socket.disconnect()
-        socket.removeAllHandlers()
-        circle.hidden = true
-        debugPrint("Timeout")
-    }
     
     func getActivityCircle(circle : UIActivityIndicatorView) {
         self.circle = circle
