@@ -7,15 +7,45 @@
 //
 
 import UIKit
+import SocketIOClientSwift
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var loginController = LoginController()
+    var socket: SocketIOClient!
+    var json: [String: AnyObject]!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        /*socket = SocketIOClient(socketURL: NSURL(string: "http://unifi:80")!, options: [ ])
+        
+        socket.connect()
+        
+        socket.on("connect") { ack in
+            self.socket.emit("call", ["id" : "callAction", "action" : "removeGroup", "params" : [ "groupId" : "test"]] )
+        }
+        
+        socket.on("callResult") { data, ack in
+            
+            let json = JSON(data)
+            debugPrint(json[0]["id"].string)
+        }
+        
+        
+         socket.on("rules") {data, ack in
+         print(data)
+         }*/
+        
+        
+        if let loginViewController = window?.rootViewController as? LoginViewController {
+            loginViewController.loginController = loginController
+        }
+        
         return true
     }
 

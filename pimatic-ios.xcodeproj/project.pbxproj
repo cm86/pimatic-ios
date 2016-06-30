@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8E0FA8DC1D2155F200DA281D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FA8DB1D2155F200DA281D /* AppDelegate.swift */; };
-		8E0FA8DE1D2155F200DA281D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FA8DD1D2155F200DA281D /* RootViewController.swift */; };
-		8E0FA8E01D2155F200DA281D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FA8DF1D2155F200DA281D /* DataViewController.swift */; };
-		8E0FA8E21D2155F200DA281D /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FA8E11D2155F200DA281D /* ModelController.swift */; };
 		8E0FA8E51D2155F200DA281D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0FA8E31D2155F200DA281D /* Main.storyboard */; };
 		8E0FA8E71D2155F200DA281D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0FA8E61D2155F200DA281D /* Assets.xcassets */; };
 		8E0FA8EA1D2155F200DA281D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0FA8E81D2155F200DA281D /* LaunchScreen.storyboard */; };
 		8E0FA8F51D2155F200DA281D /* pimatic_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FA8F41D2155F200DA281D /* pimatic_iosTests.swift */; };
 		8E0FA9001D2155F200DA281D /* pimatic_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FA8FF1D2155F200DA281D /* pimatic_iosUITests.swift */; };
+		8E0FA9141D21597100DA281D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8E0FA9131D21597100DA281D /* Podfile */; };
+		8E17DD011D23F0690044DBF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E17DCFE1D23F0690044DBF8 /* LoginViewController.swift */; };
+		8E17DD041D23F0AB0044DBF8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E17DD031D23F0AB0044DBF8 /* LoginModel.swift */; };
+		8E17DD061D23F2500044DBF8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E17DD051D23F2500044DBF8 /* LoginController.swift */; };
+		8E17DD081D2484210044DBF8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8E17DD071D2484210044DBF8 /* .gitignore */; };
+		8E17DD0A1D2546C40044DBF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E17DD091D2546C40044DBF8 /* MainViewController.swift */; };
+		B78EADC7B69C3BA9A08C5EF3 /* Pods_pimatic_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAD6D56B39D19D73265657 /* Pods_pimatic_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +42,6 @@
 /* Begin PBXFileReference section */
 		8E0FA8D81D2155F200DA281D /* pimatic-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pimatic-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0FA8DB1D2155F200DA281D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E0FA8DD1D2155F200DA281D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		8E0FA8DF1D2155F200DA281D /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		8E0FA8E11D2155F200DA281D /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		8E0FA8E41D2155F200DA281D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E0FA8E61D2155F200DA281D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0FA8E91D2155F200DA281D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,15 @@
 		8E0FA8FB1D2155F200DA281D /* pimatic-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pimatic-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0FA8FF1D2155F200DA281D /* pimatic_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pimatic_iosUITests.swift; sourceTree = "<group>"; };
 		8E0FA9011D2155F200DA281D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E0FA9131D21597100DA281D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8E17DCFE1D23F0690044DBF8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E17DD031D23F0AB0044DBF8 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8E17DD051D23F2500044DBF8 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		8E17DD071D2484210044DBF8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8E17DD091D2546C40044DBF8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9F49C8BCCEBC964370570DDF /* Pods-pimatic-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pimatic-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-pimatic-ios/Pods-pimatic-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E17895456DDEDB59969F3004 /* Pods-pimatic-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pimatic-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pimatic-ios/Pods-pimatic-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCAD6D56B39D19D73265657 /* Pods_pimatic_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pimatic_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78EADC7B69C3BA9A08C5EF3 /* Pods_pimatic_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +89,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275F9AFEE231395018A8485E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFCAD6D56B39D19D73265657 /* Pods_pimatic_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E0FA8CF1D2155F200DA281D = {
 			isa = PBXGroup;
 			children = (
+				8E17DD071D2484210044DBF8 /* .gitignore */,
+				8E0FA9131D21597100DA281D /* Podfile */,
 				8E0FA8DA1D2155F200DA281D /* pimatic-ios */,
 				8E0FA8F31D2155F200DA281D /* pimatic-iosTests */,
 				8E0FA8FE1D2155F200DA281D /* pimatic-iosUITests */,
 				8E0FA8D91D2155F200DA281D /* Products */,
+				F13BC6C8594AA0BFFA73DC3A /* Pods */,
+				275F9AFEE231395018A8485E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +124,10 @@
 		8E0FA8DA1D2155F200DA281D /* pimatic-ios */ = {
 			isa = PBXGroup;
 			children = (
+				8E17DCFB1D23D4D20044DBF8 /* View */,
+				8E17DCFC1D23D4D90044DBF8 /* Controller */,
+				8EA01B6B1D23282F006B70A6 /* Model */,
 				8E0FA8DB1D2155F200DA281D /* AppDelegate.swift */,
-				8E0FA8DD1D2155F200DA281D /* RootViewController.swift */,
-				8E0FA8DF1D2155F200DA281D /* DataViewController.swift */,
-				8E0FA8E11D2155F200DA281D /* ModelController.swift */,
 				8E0FA8E31D2155F200DA281D /* Main.storyboard */,
 				8E0FA8E61D2155F200DA281D /* Assets.xcassets */,
 				8E0FA8E81D2155F200DA281D /* LaunchScreen.storyboard */,
@@ -131,6 +154,40 @@
 			path = "pimatic-iosUITests";
 			sourceTree = "<group>";
 		};
+		8E17DCFB1D23D4D20044DBF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E17DCFE1D23F0690044DBF8 /* LoginViewController.swift */,
+				8E17DD091D2546C40044DBF8 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E17DCFC1D23D4D90044DBF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E17DD051D23F2500044DBF8 /* LoginController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EA01B6B1D23282F006B70A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E17DD031D23F0AB0044DBF8 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F13BC6C8594AA0BFFA73DC3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E17895456DDEDB59969F3004 /* Pods-pimatic-ios.debug.xcconfig */,
+				9F49C8BCCEBC964370570DDF /* Pods-pimatic-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E0FA9041D2155F200DA281D /* Build configuration list for PBXNativeTarget "pimatic-ios" */;
 			buildPhases = (
+				7D82E3C7D91A8E376FCAEFBC /* [CP] Check Pods Manifest.lock */,
 				8E0FA8D41D2155F200DA281D /* Sources */,
 				8E0FA8D51D2155F200DA281D /* Frameworks */,
 				8E0FA8D61D2155F200DA281D /* Resources */,
+				734122B377ED9735A14D7FAA /* [CP] Embed Pods Frameworks */,
+				3B666B2196F9ADA51963C322 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +259,7 @@
 				TargetAttributes = {
 					8E0FA8D71D2155F200DA281D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = K6ASB3BS2G;
 					};
 					8E0FA8EF1D2155F200DA281D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -235,8 +296,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E17DD081D2484210044DBF8 /* .gitignore in Resources */,
 				8E0FA8EA1D2155F200DA281D /* LaunchScreen.storyboard in Resources */,
 				8E0FA8E71D2155F200DA281D /* Assets.xcassets in Resources */,
+				8E0FA9141D21597100DA281D /* Podfile in Resources */,
 				8E0FA8E51D2155F200DA281D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,15 +320,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B666B2196F9ADA51963C322 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pimatic-ios/Pods-pimatic-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		734122B377ED9735A14D7FAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pimatic-ios/Pods-pimatic-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D82E3C7D91A8E376FCAEFBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E0FA8D41D2155F200DA281D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E0FA8DE1D2155F200DA281D /* RootViewController.swift in Sources */,
-				8E0FA8E21D2155F200DA281D /* ModelController.swift in Sources */,
-				8E0FA8E01D2155F200DA281D /* DataViewController.swift in Sources */,
+				8E17DD041D23F0AB0044DBF8 /* LoginModel.swift in Sources */,
+				8E17DD011D23F0690044DBF8 /* LoginViewController.swift in Sources */,
 				8E0FA8DC1D2155F200DA281D /* AppDelegate.swift in Sources */,
+				8E17DD061D23F2500044DBF8 /* LoginController.swift in Sources */,
+				8E17DD0A1D2546C40044DBF8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,23 +519,31 @@
 		};
 		8E0FA9051D2155F200DA281D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E17895456DDEDB59969F3004 /* Pods-pimatic-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pimatic-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "home.pimatic-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		8E0FA9061D2155F200DA281D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F49C8BCCEBC964370570DDF /* Pods-pimatic-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pimatic-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "home.pimatic-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -492,6 +612,7 @@
 				8E0FA9061D2155F200DA281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E0FA9071D2155F200DA281D /* Build configuration list for PBXNativeTarget "pimatic-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +621,7 @@
 				8E0FA9091D2155F200DA281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E0FA90A1D2155F200DA281D /* Build configuration list for PBXNativeTarget "pimatic-iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +630,7 @@
 				8E0FA90C1D2155F200DA281D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
