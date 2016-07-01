@@ -9,14 +9,23 @@
 
 
 import UIKit
+import ENSwiftSideMenu
 
-
-class MainViewController: UIViewController {
+class MainViewController: ENSideMenuNavigationController, ENSideMenuDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.hidesBackButton = true
+        
+        
+        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: SideViewController(),menuPosition:.Left)
+        //sideMenu?.delegate = self //optional
+        sideMenu?.menuWidth = 180.0 // optional, default is 160
+        //sideMenu?.bouncingEnabled = false
+        //sideMenu?.allowPanGesture = false
+        // make navigation bar showing over side menu
+        view.bringSubviewToFront(navigationBar)
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -5,4 +5,5 @@ use_frameworks!
 target "pimatic-ios" do
     pod 'Socket.IO-Client-Swift', '~> 6.1.4'
     pod 'SwiftyJSON'
+    pod 'ENSwiftSideMenu', '~> 0.1.1'
 end

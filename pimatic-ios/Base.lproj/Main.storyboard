@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="847" y="-944"/>
         </scene>
-        <!--MainViewController-->
+        <!--TestViewController-->
         <scene sceneID="e79-16-6ds">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" title="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KjP-vm-QFS" customClass="MainViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" title="TestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KjP-vm-QFS" customClass="TestViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CO7-kf-xLQ"/>
                         <viewControllerLayoutGuide type="bottom" id="rpa-I8-mNa"/>
@@ -146,16 +146,47 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="tLW-3k-H6e"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwS-YK-euZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2415" y="-944"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Side View Controller-->
+        <scene sceneID="PCA-1p-Tue">
+            <objects>
+                <tableViewController id="mdv-tw-10z" customClass="SideViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SzN-SK-vht">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="UeY-m3-320">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UeY-m3-320" id="m4L-Fx-zBG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="mdv-tw-10z" id="l8c-Lk-DZx"/>
+                            <outlet property="delegate" destination="mdv-tw-10z" id="AZn-rB-qup"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMU-9C-CqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2423" y="-209"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="clp-C9-egD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yb6-Ww-ZrR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yb6-Ww-ZrR" customClass="MainViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bb7-Xf-2l3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -164,6 +195,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="KjP-vm-QFS" kind="relationship" relationship="rootViewController" id="RgS-Q7-ORi"/>
+                        <segue destination="mdv-tw-10z" kind="show" id="ic6-Lb-LqR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7N-Gn-ofm" userLabel="First Responder" sceneMemberID="firstResponder"/>
