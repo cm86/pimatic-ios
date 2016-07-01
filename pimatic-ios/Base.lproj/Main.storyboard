@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lip-hz-vKd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yb6-Ww-ZrR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -119,7 +119,6 @@
                         <outlet property="port" destination="t7e-ve-jxx" id="BO5-qa-oe4"/>
                         <outlet property="ssl" destination="e2f-IV-rwo" id="GaN-5u-Aw9"/>
                         <outlet property="username" destination="NZ3-he-2kd" id="P8g-68-eVP"/>
-                        <segue destination="tGj-HM-A05" kind="presentation" identifier="LoginComplete" id="A2a-PW-IvV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzh-RN-vM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,40 +126,49 @@
             <point key="canvasLocation" x="847" y="-944"/>
         </scene>
         <!--MainViewController-->
-        <scene sceneID="dXe-ts-buW">
+        <scene sceneID="e79-16-6ds">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" title="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tGj-HM-A05" customClass="MainViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" title="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KjP-vm-QFS" customClass="MainViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9rQ-TJ-S34"/>
-                        <viewControllerLayoutGuide type="bottom" id="0hC-wv-ZMo"/>
+                        <viewControllerLayoutGuide type="top" id="CO7-kf-xLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rpa-I8-mNa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Hc-tC-iol">
+                    <view key="view" contentMode="scaleToFill" id="g38-tT-UYc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dID-hB-rjX">
+                                <rect key="frame" x="229" y="313" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tLW-3k-H6e"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QbQ-5t-0xM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwS-YK-euZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="-944"/>
+            <point key="canvasLocation" x="2415" y="-944"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="zuc-cn-ruQ">
+        <scene sceneID="clp-C9-egD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lip-hz-vKd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yb6-Ww-ZrR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Zm-0S-ZLz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bb7-Xf-2l3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VN8-Jb-jqR" kind="relationship" relationship="rootViewController" id="saE-Ep-V7e"/>
+                        <segue destination="KjP-vm-QFS" kind="relationship" relationship="rootViewController" id="RgS-Q7-ORi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nVq-Cl-gPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7N-Gn-ofm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="-944"/>
+            <point key="canvasLocation" x="1603" y="-944"/>
         </scene>
     </scenes>
 </document>

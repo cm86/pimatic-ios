@@ -46,7 +46,7 @@ class LoginController {
         }
     }
     
-    func connect(board : UIStoryboard?, navController :UINavigationController) {
+    func connect() {
         
         if (validData == true) {
             
@@ -63,9 +63,10 @@ class LoginController {
             ConnectionController.sharedSession.connect(address, user: login.username, password: login.password)
             
             ConnectionController.sharedSession.socket.on("connect") { ack in
-                if let mainController = board?.instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController {
-                    navController.presentViewController(mainController, animated: true, completion: nil)
-                }
+                let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController
+                let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+                
+                appDelegate?.window?.rootViewController = viewController
             }
         }
         

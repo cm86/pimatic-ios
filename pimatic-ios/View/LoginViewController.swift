@@ -76,14 +76,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         loginController?.handleErrorMessage(self.errorMsg)
         
-        loginController?.connect(self.storyboard,  navController: self.navigationController!)
-        
-        /*
-        if let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainViewController") as? MainViewController {
-            self.navigationController?.presentViewController(mainViewController, animated: true, completion: nil)
-        }
-        */
-        
+        loginController?.connect()
         
     }
 }

@@ -15,15 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var loginController = LoginController()
-    var socket: SocketIOClient!
-    var json: [String: AnyObject]!
-
+    
+    var loggedIn = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch
         
+        if(!loggedIn) {
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
+            self.window?.rootViewController = viewController
+        }
         
-        if let navController = window?.rootViewController as? UINavigationController, let loginViewController = navController.viewControllers.first as? LoginViewController {
+        if let loginViewController = window?.rootViewController as? LoginViewController {
             loginViewController.loginController = loginController
         }
         
