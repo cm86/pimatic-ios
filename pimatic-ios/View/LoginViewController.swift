@@ -29,6 +29,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         loginController?.getActivityCircle(loginCircle)
         
+        self.ssl.on = false
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }

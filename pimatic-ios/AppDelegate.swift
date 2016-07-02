@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(!loggedIn) {
             let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
             self.window?.rootViewController = viewController
+        } else {
+            ConnectionController.sharedSession.connect(NSURL(string: "http://unifi:80")!, user: "test", password: "test")
         }
         
         if let loginViewController = window?.rootViewController as? LoginViewController {

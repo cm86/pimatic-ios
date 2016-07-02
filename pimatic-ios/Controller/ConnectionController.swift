@@ -14,7 +14,7 @@ class ConnectionController {
     
     func connect(url : NSURL, user : String, password: String) {
         
-        socket = SocketIOClient(socketURL: url, options: [ .Log(true), .Reconnects(true), .ReconnectWait(5), .SelfSigned(true), .ConnectParams(["username" : user, "password" : password]), .ForceNew(true)])
+        socket = SocketIOClient(socketURL: url, options: [ .Log(false), .Reconnects(true), .ReconnectWait(5), .SelfSigned(true), .ConnectParams(["username" : user, "password" : password]), .ForceNew(true)])
         
         socket.connect(timeoutAfter: 20, withTimeoutHandler: timeoutHandler)
         
