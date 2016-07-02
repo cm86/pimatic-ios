@@ -21,7 +21,10 @@
 		8E17DD0A1D2546C40044DBF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E17DD091D2546C40044DBF8 /* MainViewController.swift */; };
 		8E17DD0D1D25652A0044DBF8 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E17DD0C1D25652A0044DBF8 /* ConnectionController.swift */; };
 		8EEA0E121D271C1D00A0B46C /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA0E111D271C1D00A0B46C /* SideViewController.swift */; };
-		8EEA0E141D271E4D00A0B46C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA0E131D271E4D00A0B46C /* TestViewController.swift */; };
+		8EEA0E141D271E4D00A0B46C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA0E131D271E4D00A0B46C /* HomeViewController.swift */; };
+		8EEA0E161D27C8C000A0B46C /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA0E151D27C8C000A0B46C /* DeviceModel.swift */; };
+		8EEA0E181D27C8D300A0B46C /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA0E171D27C8D300A0B46C /* PageModel.swift */; };
+		8EEA0E1A1D27D19100A0B46C /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA0E191D27D19100A0B46C /* PageController.swift */; };
 		B78EADC7B69C3BA9A08C5EF3 /* Pods_pimatic_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCAD6D56B39D19D73265657 /* Pods_pimatic_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +66,10 @@
 		8E17DD091D2546C40044DBF8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8E17DD0C1D25652A0044DBF8 /* ConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
 		8EEA0E111D271C1D00A0B46C /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
-		8EEA0E131D271E4D00A0B46C /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		8EEA0E131D271E4D00A0B46C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8EEA0E151D27C8C000A0B46C /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		8EEA0E171D27C8D300A0B46C /* PageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		8EEA0E191D27D19100A0B46C /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		9F49C8BCCEBC964370570DDF /* Pods-pimatic-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pimatic-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-pimatic-ios/Pods-pimatic-ios.release.xcconfig"; sourceTree = "<group>"; };
 		E17895456DDEDB59969F3004 /* Pods-pimatic-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pimatic-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pimatic-ios/Pods-pimatic-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		FFCAD6D56B39D19D73265657 /* Pods_pimatic_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pimatic_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +172,7 @@
 				8E17DCFE1D23F0690044DBF8 /* LoginViewController.swift */,
 				8E17DD091D2546C40044DBF8 /* MainViewController.swift */,
 				8EEA0E111D271C1D00A0B46C /* SideViewController.swift */,
-				8EEA0E131D271E4D00A0B46C /* TestViewController.swift */,
+				8EEA0E131D271E4D00A0B46C /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 			children = (
 				8E17DD051D23F2500044DBF8 /* LoginController.swift */,
 				8E17DD0C1D25652A0044DBF8 /* ConnectionController.swift */,
+				8EEA0E191D27D19100A0B46C /* PageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				8E17DD031D23F0AB0044DBF8 /* LoginModel.swift */,
+				8EEA0E151D27C8C000A0B46C /* DeviceModel.swift */,
+				8EEA0E171D27C8D300A0B46C /* PageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,9 +393,12 @@
 			files = (
 				8E17DD041D23F0AB0044DBF8 /* LoginModel.swift in Sources */,
 				8E17DD0D1D25652A0044DBF8 /* ConnectionController.swift in Sources */,
-				8EEA0E141D271E4D00A0B46C /* TestViewController.swift in Sources */,
+				8EEA0E1A1D27D19100A0B46C /* PageController.swift in Sources */,
+				8EEA0E141D271E4D00A0B46C /* HomeViewController.swift in Sources */,
 				8E17DD011D23F0690044DBF8 /* LoginViewController.swift in Sources */,
 				8E0FA8DC1D2155F200DA281D /* AppDelegate.swift in Sources */,
+				8EEA0E161D27C8C000A0B46C /* DeviceModel.swift in Sources */,
+				8EEA0E181D27C8D300A0B46C /* PageModel.swift in Sources */,
 				8E17DD061D23F2500044DBF8 /* LoginController.swift in Sources */,
 				8E17DD0A1D2546C40044DBF8 /* MainViewController.swift in Sources */,
 				8EEA0E121D271C1D00A0B46C /* SideViewController.swift in Sources */,

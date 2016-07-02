@@ -125,34 +125,34 @@
             </objects>
             <point key="canvasLocation" x="847" y="-944"/>
         </scene>
-        <!--TestViewController-->
-        <scene sceneID="e79-16-6ds">
+        <!--Home View Controller-->
+        <scene sceneID="pFU-Wc-H7O">
             <objects>
-                <viewController storyboardIdentifier="TestViewController" title="TestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KjP-vm-QFS" customClass="TestViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CO7-kf-xLQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="rpa-I8-mNa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g38-tT-UYc">
+                <tableViewController id="Cd7-wU-RJE" customClass="HomeViewController" customModule="pimatic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vB0-br-cr9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dID-hB-rjX">
-                                <rect key="frame" x="229" y="313" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="tLW-3k-H6e"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uwS-YK-euZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" id="UXy-3C-krA">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UXy-3C-krA" id="q4J-j1-pnN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cd7-wU-RJE" id="hse-ST-S3b"/>
+                            <outlet property="delegate" destination="Cd7-wU-RJE" id="HHq-sm-2BU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="y8W-85-Hpw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aO8-WH-wTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2415" y="-944"/>
+            <point key="canvasLocation" x="2345" y="-944"/>
         </scene>
         <!--Side View Controller-->
         <scene sceneID="PCA-1p-Tue">
@@ -194,8 +194,8 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="KjP-vm-QFS" kind="relationship" relationship="rootViewController" id="RgS-Q7-ORi"/>
                         <segue destination="mdv-tw-10z" kind="show" id="ic6-Lb-LqR"/>
+                        <segue destination="Cd7-wU-RJE" kind="relationship" relationship="rootViewController" id="v76-fb-duL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7N-Gn-ofm" userLabel="First Responder" sceneMemberID="firstResponder"/>
