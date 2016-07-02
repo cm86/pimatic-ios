@@ -11,12 +11,11 @@ import SwiftyJSON
 
 class SideViewController: UITableViewController {
     
+    var homeView: HomeViewController!
     var menuItems = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         // Customize apperance of table view
         tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
@@ -30,6 +29,12 @@ class SideViewController: UITableViewController {
         self.tableView.registerClass( UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         PageController.sharedSession.setPages(self)
+        
+        
+        homeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("HomeViewController") as? HomeViewController
+        
+        
+      
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -56,5 +61,16 @@ class SideViewController: UITableViewController {
         
         cell.textLabel!.text = menuItems[indexPath.row]
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cellName = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
+        let cellID = PageController.sharedSession.getID(cellName!)
+        
+        print(PageController.sharedSession.getDeviceNames(cellID))
+        
+        print(homeView.homeItems)
+ 
     }
 }

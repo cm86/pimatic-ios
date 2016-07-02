@@ -12,7 +12,7 @@ import UIKit
 import ENSwiftSideMenu
 
 class MainViewController: ENSideMenuNavigationController, ENSideMenuDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

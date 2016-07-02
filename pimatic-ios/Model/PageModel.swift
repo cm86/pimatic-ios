@@ -14,9 +14,9 @@ class PageModel {
     var devices: [String]
     
     init() {
-        self.name = ""
-        self.id = ""
-        self.devices = [""]
+        self.name = String()
+        self.id = String()
+        self.devices = [String]()
     }
     
     init(name: String, id: String, devices: [String]) {
@@ -24,6 +24,5 @@ class PageModel {
         self.id = id
         self.devices = devices
     }
-    
     
 }

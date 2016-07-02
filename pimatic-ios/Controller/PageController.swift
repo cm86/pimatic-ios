@@ -12,12 +12,6 @@ class PageController {
     
     var pages = [PageModel]()
     
-    init() {
-        
-        
-    }
-    
-    
     private func getPage(jsonData: JSON) -> PageModel {
         
         let page = PageModel()
@@ -34,6 +28,10 @@ class PageController {
     
     func setPages(view: SideViewController) {
         ConnectionController.sharedSession.socket.on("pages") { data, ack in
+            
+            // ensure that pages are empty at the beginning of new pages
+            
+            self.pages = [PageModel]()
             
             let json = JSON(data)
             
@@ -56,6 +54,26 @@ class PageController {
         }
 
         return items
+    }
+    
+    func getID(name: String) -> String {
+        for page in pages {
+            if(name == page.name) {
+                return page.id
+            }
+        }
+        
+        return ""
+    }
+    
+    func getDeviceNames(id: String) -> [String] {
+        for page in pages {
+            if(id == page.id) {
+                return page.devices
+            }
+        }
+        
+        return [""]
     }
     
     static let sharedSession = PageController()
