@@ -9,19 +9,23 @@
 import UIKit
 import ENSwiftSideMenu
 
-class HomeViewController: UITableViewController, ENSideMenuDelegate {
+class HomeViewController: UITableViewController {
     
-    var homeItems = [String]()
+    var homeItems = ["Test1", "Test2", "Test3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
         tableView.separatorStyle = .None
         self.tableView.registerClass( UITableViewCell.self, forCellReuseIdentifier: "homeCell")
 
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HomeViewController.backSwipe))
         
-        homeItems = ["Test1", "Test2", "Test3"]
+         rightSwipe.direction = .Right
         
-        self.sideMenuController()?.sideMenu?.delegate = self
+        view.addGestureRecognizer(rightSwipe)
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,5 +50,25 @@ class HomeViewController: UITableViewController, ENSideMenuDelegate {
         
         cell.textLabel!.text = homeItems[indexPath.row]
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "GoSide") {
+            //let hvc: SideViewController = segue.destinationViewController as! SideViewController
+            
+            //hvc.menuItems = ["Test"]
+        }
+        
+    }
+    
+    func backSwipe() {
+        self.performSegueWithIdentifier("GoSide", sender: self)
     }
 }

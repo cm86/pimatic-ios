@@ -41,7 +41,6 @@ class PageController {
             }
             
             view.menuItems = self.returnPageNames()
-            view.tableView.reloadData()
         }
     }
     
